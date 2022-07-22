@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.mycompany.mediaaluno;
+package com.mycompany.mediaaluno2;
 
 import java.util.Scanner;
 
@@ -11,14 +11,15 @@ import java.util.Scanner;
  *
  * @author rodri
  */
-public class MediaAluno {
+public class MediaAluno2 {
 
     public static void main(String[] args) {
     String aluno;
-    float n1,n2,n3;
+    float n1,n2,n3,media;
+    String status;
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("Digite o nome do aluno: ");
+    System.out.print("Digite o nome do aluno: ");
     aluno = scan.nextLine();
     System.out.printf("Digite a 1º nota do %s: ",aluno);
     n1 = scan.nextInt();
@@ -26,9 +27,19 @@ public class MediaAluno {
     n2 = scan.nextInt();
     System.out.printf("Digite a 3º nota do %s: ",aluno);
     n3 = scan.nextInt();
-
-    System.out.printf("A media do aluno %s e %.1f",aluno,((n1+n2+n3)/3));
-        
-        
+    
+    media = (n1+n2+n3)/3;
+    
+        if (media >= 7) {
+            status = "aprovado";
+        } else if (media <= 5) {
+            status = "reprovado";
+        } else {
+            status = "em recuperação";
+        }
+    
+    
+    System.out.printf("A media do aluno %s e %.1f estando %s",aluno,media,status);
+    
     }
 }
