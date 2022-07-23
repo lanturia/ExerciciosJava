@@ -13,7 +13,6 @@ package com.mycompany.numerandom;
 public class NumeRandom {
 
     public static void main(String[] args) {
-        int j = 0;
         int achei = 0;
         
         
@@ -21,7 +20,7 @@ public class NumeRandom {
         int numAleatorio = (int)(Math.random() * 200 ) + 1;
             System.out.println("Achei o numero " + numAleatorio);
             if (numAleatorio >= 10 && numAleatorio <= 150){
-                achei = j++;
+                achei++;
             }  
      }
         System.out.println("Achei " + achei + " numeros entre 10 e 150");

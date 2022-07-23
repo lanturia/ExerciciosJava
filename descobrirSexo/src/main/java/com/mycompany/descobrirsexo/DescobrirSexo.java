@@ -14,15 +14,13 @@ public class DescobrirSexo {
     public static void main(String[] args) {
         int M = 0;
         int F = 0;
-        int y = 1;
-        int z = 1;
         for (int i = 0; i < 30; i++) {
         int numAleatorio = (int)(Math.random() * 2 ) + 1;
             System.out.println(numAleatorio);
             if (numAleatorio == 1){
-                M = y++;
+                M++;
             }  else {
-                F = z++;
+                F++;
             }
      }
         System.out.printf("Tem %d Homens e %d Mulheres",M,F);
